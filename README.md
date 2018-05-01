@@ -6,6 +6,7 @@
 - Tool: Intellij IDEA
 - JDK: JAVA9
 - Port: 8080
+- DB: MySQL
 
 ## 主要技术内容  
 - Spring Boot & Spring Security
@@ -19,7 +20,6 @@
 - user: root   
 - password: root  
 - database_name: login_demo
-
 
 ### 生成用户表
 
@@ -51,9 +51,9 @@ insert  into `sys_user_roles`(`sys_user_id`,`roles_id`) values (1,1),(2,2);
 ![image.png-56.7kB][5]
 
 ## Ref
-[SpringSecurity重写详解：springboot 集成 spring security 详细][6]  
-[GITHUB教程：Spring、SpringMVC、MyBatis、Spring Boot案例][7]  
-[Spring Security 参考手册][8]  
+1. [SpringSecurity重写详解：springboot 集成 spring security 详细][6]  
+2. [GITHUB教程：Spring、SpringMVC、MyBatis、Spring Boot案例][7]  
+3. [Spring Security 参考手册][8]  
 
 
   [1]: http://static.zybuluo.com/yylllyy/nj7lktr7gacjq7fj5g71yl3u/image.png
