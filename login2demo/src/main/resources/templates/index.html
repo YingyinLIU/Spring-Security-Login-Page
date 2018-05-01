@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8"/>
+    <title sec:authentication="name"></title>
+    <link rel="/webjars/bootstrap/4.1.0/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/signin.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="starter-template">
+        <div class="contain">
+            <h1 th:text="${msg.title}"></h1>
+            <p th:text="${msg.content}"></p>
+        </div>
+        <div class="ex_info" sec:authorize="hasRole('ROLE_ADMIN')">
+            <p style="color:black;" th:text="${msg.extraInfo}"></p>
+        </div>
+        <div class="ex_info"  sec:authorize="hasRole('ROLE_USER')">
+            <p style="color:black;">No more infos!</p>
+        </div>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" class="btn btn-primary" value="Logout"/>
+        </form>
+    </div>
+</div>
+</body>
+</html>
